@@ -8,8 +8,11 @@ function changeColor() {
 function getRandomHexColor() {
   const letters = "0123456789ABCDEF";
   let color = "#";
+
   for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+    let letterIndex = Math.floor(Math.random() * 16);
+    console.log(letterIndex, letters[letterIndex]);
+    color = color + letters[letterIndex];
   }
   return color;
 }
